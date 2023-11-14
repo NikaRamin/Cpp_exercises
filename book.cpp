@@ -9,7 +9,7 @@ class book{
         string author;
         int year;
     public:
-    book(string nn = NULL ,string aa = NULL ,int yy= 0){
+    book(string nn = " ",string aa = " " ,int yy= 0){
         name = nn;
         author = aa;
         year = yy;
@@ -27,11 +27,16 @@ class book{
 };
 
 ostream& operator <<(ostream& cout, book x){
+    cout<<"BookName:";
     cout<<x.name;
-    cout<<" , ";
+    cout<<endl;
+    cout<<"Author:";
     cout<<x.author;
-    cout<<" , ";
+    cout<<endl;
+    cout<<"PublictionYear:";
     cout<<x.year;
+    cout<<endl;
+    cout<<"=================";
     return cout;
 }
 
@@ -46,7 +51,7 @@ istream& operator >>(istream& cin, book &x){
 int main(){
     book shelf[5],temp;
     for(int i = 0 ; i < 5; i++){
-        cout<<"Type name, author and year of the book number "<<i+1<<":"<<endl;
+        cout<<"please enter BookName, Author and PublictionYear of the book number "<<i+1<<":"<<endl;
         cin>>shelf[i];
     }
     for(int i = 0 ; i < 5 ; i++){
@@ -58,6 +63,7 @@ int main(){
             }
         }
     }
+    cout<<"Sorted books:"<<endl;
     for(int i = 0 ; i < 5 ; i++){
         cout<<shelf[i];
         cout<<endl;
