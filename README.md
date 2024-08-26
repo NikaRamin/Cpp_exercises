@@ -1,2 +1,2 @@
 # Cpp_exercises
-My basic exercises for learning c++
+Exercises to learn c++
